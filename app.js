@@ -8,3 +8,5 @@ const game = {
       (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
   }
 }
+
+console.log('testing git')
