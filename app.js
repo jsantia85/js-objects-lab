@@ -40,7 +40,7 @@ const game = {
     let guess; 
 
     do {
-      //assign guess as an integer valye parsed from the player's input to the prompt
+      //assign guess as an integer value parsed from the player's input to the prompt
       guess = parseInt(
         prompt(
           `Enter a guess between ${this.smallestNum} and ${this.biggestNum}`
