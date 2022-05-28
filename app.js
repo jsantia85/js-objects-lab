@@ -6,7 +6,7 @@ const game = {
   //initialize empty array.
   prevGuesses: [],
 
-  //beginning of play section: 
+  //starts play function: 
   play: function() {
     this.setRange()
 
@@ -31,7 +31,7 @@ const game = {
     } while (this.prevGuesses[this.prevGuesses.length - 1] !== this.secretNum);
   },
 
-  //beginning of getGuess function
+  //starts of getGuess: function
 
   getGuess: function () {
     //initialize a guess variable
@@ -52,6 +52,11 @@ const game = {
     //after loop done once, return the guess
     return guess; 
   },
+
+  //starts setRange: function
+  setRange : function() {
+    
+  }
 
 
   }
