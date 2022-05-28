@@ -62,6 +62,9 @@ const game = {
           `Enter a number - this will be the low end of the range.`
         )
       );
+    } while (isNaN(this.smallestNum)) //while this.smallestNum is not a number
+    do {
+      
     }
   }
 
