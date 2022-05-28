@@ -77,8 +77,12 @@ const game = {
   },
   //starts bonus part
   resetRange: function () {
-
-  }
+    //if the last number the player entered is more than secretNum
+    if(this.prevGuesses[this.prevGuesses.length - 1] > this.secretNum) {
+      //set the biggestNum equal to the player's last guess
+      this.biggestNum = this.prevGuesses[this.prevGuesses.length - 1]
+    }
+  },
 
 
   }
