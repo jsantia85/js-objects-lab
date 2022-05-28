@@ -64,7 +64,12 @@ const game = {
       );
     } while (isNaN(this.smallestNum)) //while this.smallestNum is not a number
     do {
-      
+      //assign this.highestNum as an integer value parsed from the user's input to the prompt
+      this.biggestNum = parseInt(
+        prompt(
+          `Enter a number that is ${this.smallestNum +2} or more. This will be the high end fo the range.`
+        )
+      ),
     }
   }
 
