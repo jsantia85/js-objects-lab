@@ -80,7 +80,10 @@ const game = {
     //if the last number the player entered is more than secretNum
     if(this.prevGuesses[this.prevGuesses.length - 1] > this.secretNum) {
       //set the biggestNum equal to the player's last guess
-      this.biggestNum = this.prevGuesses[this.prevGuesses.length - 1]
+      this.biggestNum = this.prevGuesses[this.prevGuesses.length - 1];
+    } else {
+      //otherwise set the smallestNum qual to the player's last guess
+      this.smallestNum = this.prevGuesses[this.prevGuesses.length - 1]
     }
   },
 
