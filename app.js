@@ -7,7 +7,7 @@ const game = {
   //initialize empty array.
   prevGuesses: [],
 
-  //play section: 
+  //beginning of play section: 
   play: function() {
     this.setRange()
 
@@ -30,6 +30,14 @@ const game = {
       //fourth command: if the player's last gues was not the secretNum, do it all again
     } while (this.prevGuesses[this.prevGuesses.length - 1] !== this.secretNum);
   },
+
+  //beginning of getGuess function
+
+  getGuess: function () {
+    //initialize a guess variable
+    let guess; 
+
+  }
 
 
   }
