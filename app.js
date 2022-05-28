@@ -86,6 +86,13 @@ const game = {
       this.smallestNum = this.prevGuesses[this.prevGuesses.length - 1]
     }
   },
+  
+  //starts render: function
+  render: function(){
+    //initalize a msg varible
+    let msg;
+    
+  }
 
 
   }
