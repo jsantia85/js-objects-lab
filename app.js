@@ -55,7 +55,14 @@ const game = {
 
   //starts setRange: function
   setRange : function() {
-    
+    do {
+      //assign this.smallestNum as an integer value parsed from the user's input to the prompt
+      this.smallestNum = parseInt(
+        prompt(
+          `Enter a number - this will be the low end of the range.`
+        )
+      );
+    }
   }
 
 
