@@ -56,7 +56,7 @@ const game = {
   //starts setRange: function
   setRange : function() {
     do {
-      //assign this.smallestNum as an integer value parsed from the user's input to the prompt
+      //assign this.smallestNum as an integer value parsed from the player's input to the prompt
       this.smallestNum = parseInt(
         prompt(
           `Enter a number - this will be the low end of the range.`
@@ -64,14 +64,17 @@ const game = {
       );
     } while (isNaN(this.smallestNum)) //while this.smallestNum is not a number
     do {
-      //assign this.highestNum as an integer value parsed from the user's input to the prompt
+      //assign this.highestNum as an integer value parsed from the player's input to the prompt
       this.biggestNum = parseInt(
         prompt(
-          `Enter a number that is ${this.smallestNum +2} or more. This will be the high end fo the range.`
+          `Enter a number that is ${this.smallestNum +2} or more. This will be the high end of the range.`
         )
-      ),
-    }
-  }
+      );
+    } while (//while this.higestNum is not a number or while this.highestNum isn't larger than this.smallestNum + 2 (to allow space for this.secretNum to exist)
+      isNaN(this.biggestNum) ||
+      this.biggestNum < this.smallestNum + 2
+    )
+  },
 
 
   }
