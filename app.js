@@ -18,17 +18,19 @@ const game = {
 
       //For this situation the game loop should run at least once, thus do...while loop works for this situation 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while'
     do {
+
       //first command: Get the player's valid guess and push it into the prevGuesses array.
       this.prevGuesses.push(this.getGuess());
 
       //second command: call the resetRange method, and reset the range after a guess has been made
       this.resetRange();
 
-      //third command: call the render mothod and render the result of the player's guess
+      //third command: call the render method and render the result of the player's guess
       this.render();
 
-      //fourth command: if the player's last gues was not the secretNum, do it all again
+      //fourth command: if the player's last guess was not the secretNum, do it all again
     } while (this.prevGuesses[this.prevGuesses.length - 1] !== this.secretNum);
+
   },
 
   //beginning of getGuess function
@@ -36,6 +38,15 @@ const game = {
   getGuess: function () {
     //initialize a guess variable
     let guess; 
+
+    do {
+      //assign guess as an integer valye parsed from the player's input to the prompt
+      guess = parseInt(
+        prompt(
+          `Enter a guess between ${this.smallestNum} and ${this.biggestNum}`
+        )
+      );
+    }
 
   }
 
