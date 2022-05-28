@@ -75,6 +75,14 @@ const game = {
       this.biggestNum < this.smallestNum + 2
     )
   },
+  //starts bonus part
+  resetRange: function () {
+
+  }
 
 
   }
+
+  //call game.play and start the game
+
+  game.place();
