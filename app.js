@@ -3,7 +3,6 @@ const game = {
   biggestNum: 100,
   smallestNum: 1,
   secretNum: null,
-
   //initialize empty array.
   prevGuesses: [],
 
@@ -30,7 +29,6 @@ const game = {
 
       //fourth command: if the player's last guess was not the secretNum, do it all again
     } while (this.prevGuesses[this.prevGuesses.length - 1] !== this.secretNum);
-
   },
 
   //beginning of getGuess function
@@ -46,9 +44,14 @@ const game = {
           `Enter a guess between ${this.smallestNum} and ${this.biggestNum}`
         )
       );
-    }
-
-  }
+    } while ( //following lines: while the guess is not a number or the guess is less than smallestNum or the guess is greater than biggestNum, return the guess
+      isNaN(guess) || 
+      guess < this.smallestNum ||
+      guess > this.biggestNum
+    )
+    //after loop done once, return the guess
+    return guess; 
+  },
 
 
   }
