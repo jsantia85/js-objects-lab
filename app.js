@@ -91,7 +91,13 @@ const game = {
   render: function(){
     //initalize a msg varible
     let msg;
-    
+
+    //if the player has guessed the secretNum
+    if (this.prevGuesses[this.prevGuesses.length - 1] === this.secretNum) {
+      //assign the victory message to the msg varible
+      msg = `Congrats! you guessed the number in ${this.prevGuesses.length} ${this.prevGuesses.length > 1 ? 'guesses' : 'guess'
+    }!`;
+    }
   }
 
 
