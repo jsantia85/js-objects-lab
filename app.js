@@ -97,6 +97,12 @@ const game = {
       //assign the victory message to the msg varible
       msg = `Congrats! you guessed the number in ${this.prevGuesses.length} ${this.prevGuesses.length > 1 ? 'guesses' : 'guess'
     }!`;
+    } else {
+      //if not, assign the too high/low message to the msg varible 
+      msg = `Your guess is too ${this.prevGuesses[this.prevGuesses.length - 1] > this.secretNum
+      ? 'high'
+      : 'low'
+    }/nPrevious guesses: ${this.prevGuesses.join(',')}`;
     }
   }
 
